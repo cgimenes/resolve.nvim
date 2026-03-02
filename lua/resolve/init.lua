@@ -681,7 +681,7 @@ local function get_diff_command(file1, file2)
     "diff --color=always -U1000000 %s %s | delta --no-gitconfig --keep-plus-minus-markers --file-style=omit --hunk-header-style=omit %s",
     vim.fn.shellescape(file1),
     vim.fn.shellescape(file2),
-    is_light and "--light" or ""
+    is_light and "--light" or "--dark"
   )
 end
 
